@@ -1,5 +1,7 @@
 node_modules/
+firefox_root/
 npm-debug.log
 *.sw[ponm]
 gh-pages
 build
+*.*~
