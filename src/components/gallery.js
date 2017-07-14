@@ -1,18 +1,19 @@
 import React from 'react';
 
 const Gallery = (props) => {
-    const imageItems = props.images.map((image) => {
+    const imageItems = props.images.map((image, index) => {
         return (
-            <img onClick={() => props.onImageSelect(image.pano)}
-                src={image.pano}
-                alt={image.name}
-                height="48px"
-                width="48px"/>
+            <li>
+                <img onClick={() => props.onImageSelect(image.pano)}
+                    src={image.pano}
+                    alt={image.name}
+                    key={index}/>
+            </li>
         );
     });
 
     return (
-        <ul>
+        <ul className="image-gallery">
             {imageItems}
         </ul>
     );
