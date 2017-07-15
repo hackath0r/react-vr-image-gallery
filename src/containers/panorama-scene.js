@@ -12,6 +12,8 @@ class PanoramaScene extends Component {
         return (
             <Scene>
                 <Entity primitive="a-sky" src={this.props.selectedImage.pano} />
+                <a-text value={this.props.selectedImage.name} width="4" position="-0.8 1.5 -1.5"
+                        rotation="0 20 0"></a-text>
                 <Entity primitive="a-camera">
                   <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
                 </Entity>
