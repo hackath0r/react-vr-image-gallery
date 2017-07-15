@@ -17,6 +17,7 @@ const initialState = [
     }
 ];
 
+// This reducer is responsible for images state
 export default function images(state = initialState, action) {
     return state;
 }

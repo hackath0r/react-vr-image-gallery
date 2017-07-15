@@ -3,6 +3,7 @@ import {Entity, Scene} from 'aframe-react';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Panorama 360 image container
 class PanoramaScene extends Component {
     render() {
         if (!this.props.selectedImage) {
@@ -19,10 +20,14 @@ class PanoramaScene extends Component {
     }
 }
 
+
+// selected image state from redux store will show up as props
+// inside of PanoramaScene container
 function mapStateToProps(state) {
     return {
         selectedImage: state.selectedImage
     };
 }
 
+// Connect redux store with PanoramaScene container
 export default connect(mapStateToProps)(PanoramaScene);

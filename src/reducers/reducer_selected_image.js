@@ -4,6 +4,7 @@ const initialSelectedImage =
         "name": "Truro Park"
     };
 
+// This reducer is responsible for selectedImage state
 export default function(state = initialSelectedImage, action) {
     switch(action.type){
         case 'IMAGE_SELECTED':
