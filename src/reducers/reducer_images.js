@@ -19,5 +19,9 @@ const initialState = [
 
 // This reducer is responsible for images state
 export default function images(state = initialState, action) {
+    switch(action.type){
+        case 'GET_IMAGES':
+            return action.payload.data;
+    }
     return state;
 }
